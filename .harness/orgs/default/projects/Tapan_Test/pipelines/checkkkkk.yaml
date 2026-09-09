@@ -1,0 +1,32 @@
+pipeline:
+  name: checkkkkk
+  identifier: checkkkkk
+  tags: {}
+  projectIdentifier: Tapan_Test
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: ci
+        identifier: ci
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: false
+          caching:
+            enabled: true
+            override: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Sh
+                    command: <+secrets.getValue("secret-ref")>
