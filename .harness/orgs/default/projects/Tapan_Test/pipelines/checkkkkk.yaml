@@ -29,4 +29,6 @@ pipeline:
                   identifier: Run_1
                   spec:
                     shell: Sh
-                    command: <+secrets.getValue("secret-ref")>
+                    command: |-
+                      <+secrets.getValue("secret-ref")>
+                      <+secrets.getValue("org.secret-ref")>
