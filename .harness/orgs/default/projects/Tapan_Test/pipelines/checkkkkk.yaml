@@ -32,4 +32,4 @@ pipeline:
                     command: |-
                       <+secrets.getValue("secret-ref")>
                       <+secrets.getValue("org.secret-ref")>
-                      <+secrets.getValue("acc.secret-ref")>
+                      <+secrets.getValue("account.secret-ref")>
