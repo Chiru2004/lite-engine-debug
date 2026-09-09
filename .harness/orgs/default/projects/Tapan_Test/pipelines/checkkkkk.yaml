@@ -30,4 +30,4 @@ pipeline:
                   spec:
                     shell: Sh
                     command: |-
-                      <+secrets.getValue("org.secret-ref")>
+                      <+secrets.getValue("secret-ref")>
